@@ -3,7 +3,7 @@ import mongoose,{ mongo } from "mongoose";
 
 
 async function conectaNaDataBase()  {
-    mongoose.connect("mongodb+srv://annasoaresbb:an123@cluster0.puelmsf.mongodb.net/livraria?retryWrites=true&w=majority");
+    mongoose.connect(process.env.DB_CONNECT_STRING);
     return mongoose.connection;
 };
 
